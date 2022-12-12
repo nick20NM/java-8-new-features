@@ -1,0 +1,25 @@
+lamba's expression -> anonymous function
+anonymous function -> without name, return type, modifier
+concrete method -> non-abstract method / method with body
+first language to use lamba's expression -> LISP
+
+example-1
+public void m1() {
+	System.out.println("hello");
+}
+
+()->{System.out.println("hello");}
+
+example-2
+public void add(int a, int b) {
+	System.out.println(a+b);
+}
+
+(int a, int b)->{System.out.println(a+b);}
+
+example-3
+public int getLength(String s) {
+	return s.length();
+}
+
+(String s)->{return s.length();}
