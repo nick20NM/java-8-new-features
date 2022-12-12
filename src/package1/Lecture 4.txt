@@ -1,0 +1,23 @@
+example-1
+public void m1() {
+	System.out.println("hello");
+}
+()->{System.out.println("hello");}
+()->System.out.println("hello");
+
+example-2
+public void add(int a, int b) {
+	System.out.println(a+b);
+}
+(int a, int b)->{System.out.println(a+b);}
+(a, b)->System.out.println(a+b); // type inference -> compiler can guess the types
+
+
+example-3
+public int getLength(String s) {
+	return s.length();
+}
+(String s)->{return s.length();}
+(s)->return s.length();
+(s)->s.length();
+s->s.length();
