@@ -1,0 +1,28 @@
+functional interface -> contains only one abstract method
+single abstract method (SAM)
+examples-
+1) Runnable -> contains only run()
+2) Callable - > call()
+3) ActionListener -> actionPerformed()
+4) Comparable -> compareTo()
+
+
+functional interface example-
+interface Interface1{
+	public void m1();
+	
+	default void m2() {
+		
+	}
+	
+	public static void m3() {
+		
+	}
+}
+
+normal interface example-
+interface Interface2{
+	public void m1();
+	
+	public void m2();
+}
