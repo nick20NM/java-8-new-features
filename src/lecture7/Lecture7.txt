@@ -1,0 +1,43 @@
+@FunctionalInterface with respect to inheritance
+note -> any no. of static & default methods can be taken
+
+case-1
+@FunctionalInterface
+public interface Parent {
+	
+	public void m1();
+
+}
+@FunctionalInterface
+public interface Child extends Parent {
+
+}
+
+case-2
+@FunctionalInterface
+public interface Parent {
+	public void m1();
+}
+@FunctionalInterface
+public interface Child extends Parent {
+	public void m1(); // over-riding
+}
+
+case-3
+@FunctionalInterface
+public interface Parent {
+	public void m1();
+}
+@FunctionalInterface
+public interface Child extends Parent {
+//	public void m2(); // compile time error
+}
+
+case-4
+@FunctionalInterface
+public interface Parent {
+	public void m1();
+}
+public interface Child extends Parent {
+	public void m2(); // normal interface
+}
