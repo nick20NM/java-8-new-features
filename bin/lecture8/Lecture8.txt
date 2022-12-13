@@ -1,0 +1,28 @@
+// case-1 -> without lambdas expression
+interface Interface1 {
+	void m1();
+}
+class Class1 implements Interface1 {
+//	@Override
+	public void m1() {
+		System.out.println("without lambda expression");
+	}	
+}
+public class Case1 {
+	public static void main(String[] args) {
+		Interface1 i1 = new Class1();
+		i1.m1();
+	}
+}
+
+// case-2 -> with lambdas expression
+interface Interface1 {
+	void m1();
+}
+public class Case2 {
+	public static void main(String[] args) {
+		Interface1 i1 = ()->System.out.println("with lambda expression");
+		i1.m1();
+	}
+}
+
