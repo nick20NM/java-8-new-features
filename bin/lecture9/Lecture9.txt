@@ -1,0 +1,102 @@
+example-1
+
+// without lambda expression
+interface Interface1 {
+	void add(int a, int b);
+}
+class Class1 implements Interface1 {
+
+	@Override
+	public void add(int a, int b) {
+		System.out.println("sum is:"+(a+b));
+	}
+}
+public class Without {
+	public static void main(String[] args) {
+		Interface1 i1 = new Class1();
+		i1.add(10, 20);
+		i1.add(100, 200);
+	}
+}
+
+// with lambda expression
+interface Interface2 {
+	void add(int a, int b);
+}
+public class With {
+	public static void main(String[] args) {
+		Interface2 i1 = (a, b)->System.out.println("sum is:"+(a+b));
+		i1.add(10, 20);
+		i1.add(100, 200);
+	}
+}
+
+----------------------------------------------------------------------------
+example-2
+
+// without lambda expression
+interface Interface1{
+	int getLength(String s);
+}
+class Class1 implements Interface1 {
+	@Override
+	public int getLength(String s) {
+		return s.length();
+	}
+}
+public class Without {
+	public static void main(String[] args) {
+		Interface1 i1 = new Class1();
+		System.out.println(i1.getLength("hello"));
+		System.out.println(i1.getLength("without lambda expression"));
+	}
+}
+
+// with lambda expression
+interface Interface2 {
+	int getLength(String s);
+}
+public class With {
+	public static void main(String[] args) {
+		Interface2 i1 = s->s.length();
+		System.out.println(i1.getLength("hello"));
+		System.out.println(i1.getLength("with lambda expression"));
+	}
+}
+
+----------------------------------------------------------------------
+example-3
+
+// without lambda expression
+interface Interface1 {
+	int squareNumber(int i);
+}
+class Class1 implements Interface1{
+	@Override
+	public int squareNumber(int i) {
+		return i*i;
+	}
+}
+public class Without {
+	public static void main(String[] args) {
+		Interface1 i1 = new Class1();
+		System.out.println(i1.squareNumber(4)); 
+		System.out.println(i1.squareNumber(5)); 
+	}
+}
+
+// with lambda expression
+interface Interface2 {
+	int squareNumber(int i);
+}
+public class With {
+	public static void main(String[] args) {
+		Interface2 i1 = i->i*i;
+		System.out.println(i1.squareNumber(3));
+		System.out.println(i1.squareNumber(4));
+	}
+}
+
+
+
+
