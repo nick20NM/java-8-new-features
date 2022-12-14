@@ -4,7 +4,7 @@ I -> interface
 C -> class
 
 Collection ->
-	1) List (I)
+	1) List (I) -> when we want to maintain insertion order in objects, then we should go for List
 		i) ArrayList (C)
 		ii) LinkedList
 		iii) Vector
@@ -12,11 +12,17 @@ Collection ->
 		*) properties of List ->
 			i) maintains insertion order
 			ii) duplicates are allowed
-	2) Set (I)
+	2) Set (I) -> when we don't want duplicate objects, then we should go for Set
 		i) HashSet
 		ii) TreeSet
 		*) properties of Set ->
 		i) duplicates are not allowed
 		ii) does not maintain insertion order
-	3) Map (I)
+	3) Map (I) -> when we want to represent objects as key-value pair, then we should go for Map
+		i) HashMap
+		ii) TreeMap
+		*) properties of Map ->
+		i) key is always unique (no duplicates)
+		ii) does not maintain insertion order
+	
  
