@@ -1,0 +1,22 @@
+Collection -> group of objects/items in a single unit/package/folder
+example -> collection of books, movies, songs etc.
+I -> interface
+C -> class
+
+Collection ->
+	1) List (I)
+		i) ArrayList (C)
+		ii) LinkedList
+		iii) Vector
+			A) Stack
+		*) properties of List ->
+			i) maintains insertion order
+			ii) duplicates are allowed
+	2) Set (I)
+		i) HashSet
+		ii) TreeSet
+		*) properties of Set ->
+		i) duplicates are not allowed
+		ii) does not maintain insertion order
+	3) Map (I)
+ 
