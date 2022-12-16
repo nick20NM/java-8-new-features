@@ -1,15 +1,8 @@
-Comparator (I) -> compare()
-* used to define our own sorting (custom/customized sorting)
-* default natural sorting order ->
-	1) Integer -> ascending
-	2) String -> alphabetical/dictionary order
+package lecture14_15_16;
 
-* public int compare(Object obj1, Object obj2) // compare(10, 20)
-1) return negative(-), if obj1 has to come before obj2
-2) return positive(+), if obj1 has to come after obj2
-3) return 0, if obj1 & obj2 are equal
-
-----------------------------------------------------------------------
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 // sorting objects without lambda expression
 class MyComparator implements Comparator<Integer> {
