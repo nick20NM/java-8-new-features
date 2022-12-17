@@ -1,0 +1,50 @@
+anonymous inner class != lambda expression
+
+example-1 - > anonymous inner class that extends concrete class
+
+class Test {
+
+}
+
+Test t = new Test() {
+
+};
+-------------------------------------------------------------------
+
+example-2 -> anonymous inner class that extends abstract class
+
+abstract class Test {
+
+}
+
+Test t = new Test() {
+
+}
+-------------------------------------------------------------------
+
+example-3 -> anonymous inner class that implements an interface 
+	which contains mulitple methods
+
+interface Test {
+ void m1();
+ void m2();
+ void m3();
+}
+
+Test t = new Test() {
+ void m1(){}
+ void m2(){}
+ void m3(){}
+};
+-----------------------------------------------------------------
+
+example-4 -> anonymous inner class implements an interface which 
+	contains only one abstract method
+
+interface Test {
+ void m1();
+}
+
+Test t = new Test(){  // or Test t = ()->System.out.println("hello"); if functional interface
+ void m1(){}
+}
