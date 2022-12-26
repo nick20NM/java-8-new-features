@@ -1,0 +1,46 @@
+example 1
+interface I1 {
+	public static void m1() {
+		System.out.println("interface static method");
+	}
+}
+
+public class Example1 implements I1 {
+
+	public static void m1() { // not overriding
+
+	}
+
+}
+------------------------------------------------------------
+
+example 2
+interface I2 {
+	public static void m1() {
+		System.out.println("interface static method");
+	}
+}
+
+public class Example2 implements I2 {
+
+	public void m1() { // not overriding
+
+	}
+
+}
+------------------------------------------------------------
+
+example 3
+interface I3 {
+	public static void m1() {
+		System.out.println("interface static method");
+	}
+}
+
+public class Example3 implements I3{
+
+	private static void m1() {
+
+	}
+
+}

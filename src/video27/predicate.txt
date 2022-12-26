@@ -1,0 +1,16 @@
+functional interfaces->
+	1) Predicate
+	2) Function
+	3) Consumer
+	4) Supplier
+	* java.util.function package
+
+* Comparable, Runnable, Callable, ActionListener
+
+1) Predicate -> boolean valued function
+	i) 1.8v
+	ii) java.util.function
+	iii) test()
+		 interface Predicate<T> {
+		 	boolean test(T t);
+		 }
