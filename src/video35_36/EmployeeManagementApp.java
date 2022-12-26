@@ -42,6 +42,19 @@ public class EmployeeManagementApp {
 		Predicate<Employee> p2=e->e.city.equals("bangalore");
 		System.out.println("bangalore employees information:");
 		display(p2, list);
+		
+		Predicate<Employee> p3=e->e.salary<60000;
+		System.out.println("all employees information whose salary < 60000");
+		display(p3, list);
+		
+		System.out.println("all managers from bangalore to give pink slip");
+		display(p1.and(p2), list);
+		
+		System.out.println("managers or salary < 60000");
+		display(p1.or(p3), list);
+		
+		System.out.println("not managers");
+		display(p1.negate(), list);
 	}
 	
 	public static void populate(ArrayList<Employee> list) {
