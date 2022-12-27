@@ -1,4 +1,4 @@
-package video35_36;
+package video35_36_37;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -16,9 +16,23 @@ class Employee {
 		this.city = city;
 	}
 
-	public String toString() {
-		String s = String.format("(%s, %s, %.2f, %s)", name, designation, salary, city);
+//	public String toString() {
+//		String s = String.format("[%s,%s,%.2f,%s]", name, designation, salary, city);
+//		return s;
+//	}
+	
+	public String toString(){
+		String s=String.format("[%s,%s,%.2f,%s]",name,designation,salary,city);
 		return s;
+	}
+	
+	// need to override equals()
+	public boolean equals(Object obj){
+		Employee e=(Employee)obj;
+		if(name.equals(e.name) && designation.equals(e.designation) && salary==e.salary && city==e.city)
+			return true;
+		else
+			return false;
 	}
 }
 
@@ -55,6 +69,13 @@ public class EmployeeManagementApp {
 		
 		System.out.println("not managers");
 		display(p1.negate(), list);
+		
+		// isEqual(), toString() & equals() must be overrided
+		Predicate<Employee> isCEO = Predicate.isEqual(new Employee("tom","ceo",50000,"bangalore"));
+		Employee e1 = new Employee("tom","ceo",50000,"bangalore");
+		Employee e2 = new Employee("jerry", "manager", 40000, "hyderabad");
+		System.out.println(isCEO.test(e1));
+		System.out.println(isCEO.test(e2));
 	}
 	
 	public static void populate(ArrayList<Employee> list) {
